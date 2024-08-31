@@ -131,15 +131,17 @@ export default function Home() {
         )}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <div
-            className="flex items-center justify-center h-screen rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-            style={{ height: "500px" }}
-          >
-            <img
-              className="h-full w-1.5/5 rounded-lg object-cover hover:scale-110 transition-all ease-out duration-300"
-              src={data.imageProfile}
-            ></img>
-            <p className="tablet:m-10 mt-2 text-xl laptop:text-xl w-full laptop:w-2/5">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 laptop:grid-cols-2">
+            <div
+              className="flex justify-center h-screen overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
+              style={{ height: "500px" }}
+            >
+              <img
+                className="rounded-lg object-cover hover:scale-110 transition-all ease-out duration-300"
+                src={data.imageProfile}
+              ></img>
+            </div>
+            <p className="rounded-lg mt-4 text-xl laptop:text-xl laptop:w-4/5">
               {data.aboutpara}
             </p>
           </div>
