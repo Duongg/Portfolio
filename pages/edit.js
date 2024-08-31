@@ -488,6 +488,19 @@ const Edit = () => {
         {currentTabs === "ABOUT" && (
           <div className="mt-10">
             <h1 className="text-2xl">About</h1>
+            <div className="flex items-center mt-2">
+              <label className="w-1/5 text-lg opacity-50">
+                Image Profile
+              </label>
+              <input
+                value={data.imageProfile}
+                onChange={(e) =>
+                  setData({ ...data, imageProfile: e.target.value })
+                }
+                className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                type="text"
+              ></input>
+            </div>
             <textarea
               className="w-full h-96 mt-10 p-2 rounded-md shadow-md border"
               value={data.aboutpara}
