@@ -74,7 +74,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:ducduong.dev98@gmail.com")
+                        router.push("/resume")
                       }
                     >
                       Resume
@@ -114,7 +114,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             </Popover.Panel>
           </>
         )}
-      </Popover>
+      </Popover >
       <div
         className={`mt-10 hidden flex-row items-center justify-between sticky ${theme === "light" && "bg-white"
           } dark:text-white top-0 z-10 tablet:flex`}

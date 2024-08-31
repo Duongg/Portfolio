@@ -52,6 +52,7 @@ export default function Home() {
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
+        <link rel="shortcut icon" href="/images/logo.png" />
         <title>{data.name}</title>
       </Head>
 
