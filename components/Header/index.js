@@ -11,7 +11,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showBlog, showResume } = data;
+  const { name, showBlog, showResume, flag } = data;
 
   useEffect(() => {
     setMounted(true);
@@ -23,12 +23,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
-              >
-                {name}.
-              </h1>
+              <div className="flex items-center">
+                <h1
+                  onClick={() => router.push("/")}
+                  className="font-medium p-2 laptop:p-0 link"
+                >
+                  {name}.
+                </h1>
+                <img
+                  className="h-5 ml-2"
+                  src={flag}
+                ></img>
+              </div>
+
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -119,12 +126,18 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         className={`mt-10 hidden flex-row items-center justify-between sticky ${theme === "light" && "bg-white"
           } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          {name}.
-        </h1>
+        <div className="flex items-center">
+          <h1
+            onClick={() => router.push("/")}
+            className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+          >
+            {name}.
+          </h1>
+          <img
+            className="h-5 ml-2"
+            src={flag}
+          ></img>
+        </div>
         {!isBlog ? (
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
