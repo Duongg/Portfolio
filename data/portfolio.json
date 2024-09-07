@@ -5,7 +5,7 @@
     "headerTaglineThree": "Android Engineer",
     "headerTaglineFour": "Based in Ho Chi Minh, VietNam",
     "showCursor": false,
-    "showBlog": false,
+    "showBlog": true,
     "darkMode": true,
     "showResume": true,
     "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg",
